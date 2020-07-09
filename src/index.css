@@ -1,0 +1,45 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1 {
+  font-size: 46pt !important;
+}
+
+h2 {
+  font-size: 40.5375pt !important;
+}
+
+body {
+  margin: 0;
+}
+
+* {
+  font-family: 'Jost' !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.page__background {
+  background: #222 !important;
+}
+
+.page__content {
+  color: #eee !important;
+}
+
+.accent {
+  color: #e00 !important;
+}
+
+.button {
+  background: #800 !important;
+  font-size: 24pt !important;
+  padding: 16px !important;
+  text-transform: none !important;
+}
+
+.toast__message {
+  font-size: 20pt !important;
+}

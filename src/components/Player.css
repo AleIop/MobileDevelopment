@@ -1,0 +1,83 @@
+.player-img{
+	width: 75px;
+	height: 75px;
+	border-radius: 75px;
+	background: #eee;
+	overflow: hidden;
+}
+
+.player-name{
+	margin-left: 8pt;
+	font-size: 24pt;
+}
+
+.player-component{
+	opacity: 0;
+	height: 0;
+
+	transition-property: margin;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+
+	padding-bottom: 18px;
+	border-bottom: 2px solid #333;
+}
+
+.player-component > .content{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-left: 18px;
+}
+
+.player-component-show{
+	height: 75px;
+	animation-name: show-animation;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-direction: unset;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+@keyframes show-animation {
+	0% {opacity: 0;}
+	12.5% {}
+	25% {}
+	37.5% {}
+	50% {}
+	62.5% {}
+	75% {}
+	87.5% {}
+	100% {opacity: 1;}
+}
+.player-component-hide{
+	animation-name: hide-animation;
+	animation-duration: 650ms;
+	animation-iteration-count: 1;
+	animation-direction: unset;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+	height: 0;
+}
+
+@keyframes hide-animation {
+	0% {opacity: 1; height: 100px}
+	12.5% {height: 100px}
+	25% {opacity: 0; height: 100px}
+	37.5% {opacity: 0;}
+	50% {opacity: 0;}
+	62.5% {opacity: 0;}
+	75% {opacity: 0;}
+	87.5% {opacity: 0;}
+	100% {opacity: 0; height: 0; border: 0 solid transparent}
+}
+
+
+@media screen and (min-width: 600px) {
+	.player-component > .content{
+		width: fit-content;
+	}
+}

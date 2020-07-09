@@ -1,0 +1,86 @@
+.page.lobby-component{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.page.lobby-component > .page__background{
+	background-color: #FDC1C3;
+}
+
+button{
+	margin: 0;
+	padding: 0;
+	color: transparent;
+	border-width: 0;
+	border-color:  transparent;
+	border-style: none;
+	font-size: 0;
+	font-family: sans-serif;
+	cursor: pointer;
+	outline: none;
+}
+
+.lobby-btn{
+	position: fixed;
+	right: 18px;
+	bottom: 18px;
+	font-size: 24pt !important;
+	background-color: #800;
+	width: 100px;
+	height: 100px;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: center;
+	font-size: 20px;
+	transition-duration: 0.4s;
+	transition-timing-function: ease;
+	transition-property: background-color;
+	border-radius: 100%;
+	color: white;
+	box-shadow: 0 2px 6px black;
+}
+
+.lobby-exit-btn::before{
+	content: 'Join';
+	animation-name: exit-animation;
+	animation-duration: 0.4s;
+	animation-iteration-count: 1;
+	animation-direction: unset;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+.lobby-join-btn::before{
+	content: 'Leave';
+	animation-name: join-animation;
+	animation-duration: 0.4s;
+	animation-iteration-count: 1;
+	animation-direction: unset;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-play-state: running;
+}
+
+
+@keyframes exit-animation {
+	0% {color:white;}
+	50% {color: transparent;content: "Leave";}
+	62.5% {content: "Leave";}
+	75% {content: "Leave";}
+	87.5% {content: "Leave";}
+	100% {color:white; content: "Leave";}
+}
+
+
+@keyframes join-animation {
+	0% {color:white;}
+	50% {color: transparent;content: "Join";}
+	62.5% {content: "Join";}
+	75% {content: "Join";}
+	87.5% {content: "Join";}
+	100% {color:white; content: "Join";}
+}
